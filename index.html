@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CurateMyStay - Premium Stays, Seamlessly Managed</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            /* Updated background image URL */
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/4429333/pexels-photo-4429333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-position: center;
+        }
+        /* Simple animation for sections */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Add a subtle hover effect to buttons */
+        .btn-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        .icon-placeholder {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            background-color: #e0e7ff; /* Light indigo for placeholder */
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-weight: bold;
+            color: #4f46e5; /* Indigo */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-600">CurateMyStay</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-indigo-600">About</a>
+                <a href="#services" class="text-gray-600 hover:text-indigo-600">Services</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <a href="#about" class="block px-6 py-3 text-gray-600 hover:bg-indigo-50 hover:text-indigo-600">About</a>
+            <a href="#services" class="block px-6 py-3 text-gray-600 hover:bg-indigo-50 hover:text-indigo-600">Services</a>
+            <a href="#contact" class="block px-6 py-3 text-gray-600 hover:bg-indigo-50 hover:text-indigo-600">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero-bg text-white fade-in-up">
+        <div class="container mx-auto px-6 py-24 md:py-32 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Premium Stays. Seamlessly Managed.</h1>
+            <p class="text-lg md:text-2xl mb-10 max-w-3xl mx-auto">At CurateMyStay, we handle everything — from listing to guest experience — so your property earns more, effortlessly.</p>
+            <div class="space-y-4 md:space-y-0 md:space-x-6">
+                <a href="#list-property" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-lg text-lg shadow-lg transition-transform duration-150 ease-in-out btn-hover">List Your Property</a>
+                <a href="#explore-stays" class="inline-block bg-white hover:bg-gray-100 text-indigo-600 font-semibold py-3 px-8 rounded-lg text-lg shadow-lg transition-transform duration-150 ease-in-out btn-hover">Explore Our Stays</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="services" class="py-16 md:py-24 bg-white fade-in-up">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Curated Stays, Powered by Smart Operations.</h2>
+            <p class="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto mb-8">
+                We offer a fully managed solution for short-term rentals — designed for property owners who want passive income, and guests who seek premium, well-maintained homes.
+            </p>
+            <p class="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto">
+                Whether you're an owner looking to monetize your Goa villa or a guest seeking a beautiful beachfront retreat, we deliver comfort, care, and consistency.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-gray-100 fade-in-up">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-16">How It Works</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold text-indigo-600 mb-6">For Property Owners</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <span class="icon-placeholder mr-4 mt-1 flex-shrink-0">✓</span>
+                            <div>
+                                <h4 class="font-semibold text-lg text-gray-700">Onboard Your Property</h4>
+                                <p class="text-gray-600">We photograph, furnish (if needed), and list it across top platforms like Airbnb, Booking.com, and more.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="icon-placeholder mr-4 mt-1 flex-shrink-0">✓</span>
+                            <div>
+                                <h4 class="font-semibold text-lg text-gray-700">We Handle Everything</h4>
+                                <p class="text-gray-600">Pricing, bookings, check-ins, cleanings, repairs — it’s all taken care of.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="icon-placeholder mr-4 mt-1 flex-shrink-0">✓</span>
+                            <div>
+                                <h4 class="font-semibold text-lg text-gray-700">You Earn, We Report</h4>
+                                <p class="text-gray-600">Get monthly payouts with performance dashboards and full transparency.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold text-teal-600 mb-6">For Guests</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <span class="icon-placeholder mr-4 mt-1 flex-shrink-0" style="background-color: #ccfbf1; color: #0d9488;">✓</span> <div>
+                                <h4 class="font-semibold text-lg text-gray-700">Curated Homes</h4>
+                                <p class="text-gray-600">Every property is handpicked for comfort, location, and design.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                             <span class="icon-placeholder mr-4 mt-1 flex-shrink-0" style="background-color: #ccfbf1; color: #0d9488;">✓</span>
+                            <div>
+                                <h4 class="font-semibold text-lg text-gray-700">Seamless Experience</h4>
+                                <p class="text-gray-600">From booking to checkout, enjoy hotel-grade service in a home-like setting.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="icon-placeholder mr-4 mt-1 flex-shrink-0" style="background-color: #ccfbf1; color: #0d9488;">✓</span>
+                            <div>
+                                <h4 class="font-semibold text-lg text-gray-700">Local Support</h4>
+                                <p class="text-gray-600">Our on-ground team ensures 24x7 support and tailored recommendations.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-white fade-in-up">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-16">Why Choose Us</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+                    <div class="text-indigo-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">End-to-End Management</h3>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+                    <div class="text-indigo-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Higher Yields for Owners</h3>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+                    <div class="text-indigo-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Design-Rich, Guest-Ready Properties</h3>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+                    <div class="text-indigo-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Hospitality-Grade Service</h3>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+                    <div class="text-indigo-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Trusted by Industry Leaders</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="list-property" class="py-16 md:py-24 bg-indigo-700 text-white fade-in-up">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Own a home in Goa? Let’s turn it into a premium income stream.</h2>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+                Join a new era of short-term rentals. We curate, manage, and maximize — while you relax.
+            </p>
+            <div class="space-y-4 md:space-y-0 md:space-x-6">
+                <a href="#contact-form" class="inline-block bg-white hover:bg-gray-100 text-indigo-700 font-semibold py-3 px-8 rounded-lg text-lg shadow-lg transition-transform duration-150 ease-in-out btn-hover">List Your Property</a>
+                <a href="#callback-form" class="inline-block border border-white hover:bg-white hover:text-indigo-700 text-white font-semibold py-3 px-8 rounded-lg text-lg shadow-lg transition-transform duration-150 ease-in-out btn-hover">Get a Callback</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 md:py-24 bg-white fade-in-up">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-12">About CurateMyStay</h2>
+            <div class="max-w-3xl mx-auto text-lg text-gray-600 space-y-6">
+                <p>
+                    CurateMyStay is a premium short-term rental management company, starting with Goa and soon expanding across India’s favorite holiday towns. We blend boutique hospitality with operational excellence — enabling homeowners to earn more and travelers to experience better.
+                </p>
+                <p>
+                    Backed by trusted creators and operators, we bring care, detail, and tech to every stay.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-gray-800 text-gray-300 py-16 fade-in-up">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12 mb-10">
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">CurateMyStay</h4>
+                    <p class="text-sm">Premium stays, seamlessly managed. Experience the best in short-term rentals.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#about" class="hover:text-indigo-400">About</a></li>
+                        <li><a href="#list-property" class="hover:text-indigo-400">List Your Property</a></li>
+                        <li><a href="#explore-stays" class="hover:text-indigo-400">Explore Our Homes</a></li>
+                        <li><a href="#" class="hover:text-indigo-400">Owner Login</a></li>
+                        <li><a href="#contact-form" class="hover:text-indigo-400">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-indigo-400" aria-label="Instagram">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2.045c-2.855 0-3.22.012-4.348.064-1.128.052-1.905.248-2.586.524a4.348 4.348 0 00-1.594 1.04A4.349 4.349 0 002.74 5.267c-.276.68-.472 1.458-.524 2.586C2.163 8.98 2.15 9.345 2.15 12.2c0 2.855.012 3.22.064 4.348.052 1.128.248 1.905.524 2.586a4.349 4.349 0 001.04 1.594 4.349 4.349 0 001.594 1.04c.68.276 1.458.472 2.586.524 1.128.052 1.492.064 4.348.064s3.22-.012 4.348-.064c1.128-.052 1.905-.248 2.586-.524a4.349 4.349 0 001.594-1.04 4.349 4.349 0 001.04-1.594c.276-.68.472-1.458.524-2.586.052-1.128.064-1.492.064-4.348s-.012-3.22-.064-4.348c-.052-1.128-.248-1.905-.524-2.586a4.349 4.349 0 00-1.04-1.594 4.349 4.349 0 00-1.594-1.04c-.68-.276-1.458-.472-2.586-.524C15.535 2.057 15.17 2.045 12.315 2.045zm0 1.955c2.805 0 3.15.012 4.25.06 1.075.05 1.65.22 2.02.36.44.17.75.39 1.05.7.3.3.525.61.7 1.05.14.37.31.945.36 2.02.05 1.1.06 1.445.06 4.25s-.01 3.15-.06 4.25c-.05 1.075-.22 1.65-.36 2.02-.175.44-.39.75-.7 1.05-.3.3-.61.525-1.05.7-.37.14-.945.31-2.02.36-1.1.05-1.445.06-4.25.06s-3.15-.01-4.25-.06c-1.075-.05-1.65-.22-2.02-.36-.44-.175-.75-.39-1.05-.7-.3-.3-.525-.61-.7-1.05-.14-.37-.31-.945-.36-2.02C4.06 15.35 4.05 15.005 4.05 12.2s.01-3.15.06-4.25c.05-1.075.22-1.65.36-2.02.175-.44.39-.75.7-1.05.3-.3.61-.525 1.05-.7.37-.14.945.31 2.02-.36 1.1-.05 1.445-.06 4.25-.06zm0 4.05a3.9 3.9 0 100 7.8 3.9 3.9 0 000-7.8zm0 6.15a2.25 2.25 0 110-4.5 2.25 2.25 0 010 4.5zm4.95-6.9a.975.975 0 100-1.95.975.975 0 000 1.95z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <a href="#" class="hover:text-indigo-400" aria-label="LinkedIn">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                         <a href="#" class="hover:text-indigo-400" aria-label="WhatsApp">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.33 3.43 16.79L2 22L7.32 20.55C8.74 21.32 10.36 21.79 12.04 21.79C17.5 21.79 21.95 17.34 21.95 11.88C21.95 6.42 17.5 2 12.04 2ZM12.04 20.13C10.56 20.13 9.15 19.72 7.96 19L7.51 18.73L4.41 19.59L5.3 16.58L5.02 16.12C4.32 14.88 3.92 13.44 3.92 11.91C3.92 7.39 7.57 3.67 12.04 3.67C16.51 3.67 20.16 7.39 20.16 11.88C20.16 16.37 16.51 20.13 12.04 20.13ZM17.34 14.45C17.13 14.92 16.1 15.44 15.75 15.49C15.41 15.54 15.01 15.55 14.64 15.39C14.27 15.23 13.37 14.92 12.33 14C11.07 12.89 10.25 11.59 10.06 11.31C9.87 11.03 9.72 10.84 9.53 10.58C9.34 10.32 9.16 10.11 9 9.93C8.84 9.75 8.65 9.59 8.43 9.29C8.21 8.99 7.99 8.71 7.84 8.48C7.68 8.26 7.53 8.07 7.38 7.88C7.24 7.69 7.09 7.57 6.92 7.44C6.72 7.29 6.53 7.23 6.33 7.23C6.14 7.23 5.95 7.29 5.78 7.46C5.62 7.63 5.27 7.97 5.27 8.63C5.27 9.28 5.78 9.86 5.91 10.03C6.03 10.21 6.55 10.99 7.56 11.93C8.58 12.87 9.34 13.28 9.79 13.47C10.24 13.66 10.6 13.72 10.88 13.66C11.16 13.61 11.95 13.14 12.19 12.5C12.43 11.86 12.43 11.34 12.35 11.17C12.27 11 12.12 10.93 11.89 10.93C11.66 10.93 11.37 11.01 11.14 11.26C10.92 11.52 10.63 11.85 10.51 12.03C10.38 12.21 10.26 12.33 10.05 12.33C9.85 12.33 9.46 12.2 8.96 11.75C8.34 11.19 7.81 10.34 7.72 10.18C7.63 10.02 7.3 9.35 7.3 8.78C7.3 8.22 7.71 7.86 7.93 7.86C8.08 7.86 8.23 7.89 8.36 7.92C8.49 7.95 8.6 7.99 8.73 8.12C8.86 8.25 8.96 8.39 9.03 8.54C9.11 8.69 9.16 8.84 9.16 8.93C9.16 9.03 9.16 9.35 9.08 9.62C9.01 9.89 8.53 10.57 8.53 10.57C8.53 10.57 8.43 10.75 8.65 10.94C8.88 11.13 9.41 11.54 9.98 12.05C10.73 12.72 11.29 13.02 11.51 13.14C11.73 13.26 11.93 13.28 12.09 13.2C12.26 13.12 12.48 12.79 12.67 12.52C12.86 12.25 13.13 12.19 13.37 12.19C13.61 12.19 13.9 12.27 14.08 12.44C14.27 12.61 14.73 13.03 14.97 13.3C15.21 13.57 15.33 13.72 15.38 13.84C15.43 13.96 15.43 14.13 15.38 14.23C15.33 14.31 15.29 14.36 15.29 14.36L15.28 14.37C15.28 14.37 15.49 13.91 17.34 14.45Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-sm">
+                <p>&copy; <span id="currentYear"></span> CurateMyStay. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                // Check if target is not just "#"
+                if (targetId.length > 1) {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Simple fade-in animation on scroll for sections
+        const sections = document.querySelectorAll('.fade-in-up');
+        const observerOptions = {
+            root: null, // relative to document viewport
+            rootMargin: '0px',
+            threshold: 0.1 // 10% of item is visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    observer.unobserve(entry.target); // Optional: stop observing after animation
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            section.style.animationPlayState = 'paused'; // Initially pause animation
+            observer.observe(section);
+        });
+
+    </script>
+
+</body>
+</html>
